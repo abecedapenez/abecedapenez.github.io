@@ -1,0 +1,216 @@
+html {
+  -ms-touch-action: none;
+}
+
+#splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 99999;
+}
+
+body, canvas, div {
+  display: block;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Remove spin of input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+
+  cursor: default;
+
+  text-align: center;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  /* fix bug: https://github.com/cocos-creator/2d-tasks/issues/791 */
+  /* overflow cannot be applied in Cocos2dGameContainer,
+  otherwise child elements will be hidden when Cocos2dGameContainer rotated 90 deg */
+  overflow: hidden;
+}
+
+#Cocos2dGameContainer {
+  position: absolute;
+  margin: 0;
+  left: 0px;
+  top: 0px;
+
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+
+canvas {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+a:link, a:visited {
+  color: #666;
+}
+
+a:active, a:hover {
+  color: #666;
+}
+
+p.header {
+  font-size: small;
+}
+
+p.footer {
+  font-size: x-small;
+}
+
+img{
+  width: 79px;
+  height: 209px;
+}
+
+.progress{
+  height: 28px;
+  background-color: #BCE4FA;
+  border-radius: 14px;
+  padding: 9px;
+
+}
+
+.progress-bar span{
+  width: 0%;
+  height: 10px;
+  border-radius: 14px;
+  display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #0D66CE;
+    -webkit-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+}
+
+
+.vertical-align-center {
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+
+#password-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background-color: #fff;
+}
+
+#password {
+  position: relative;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  line-height: 3rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0D66CE;
+  padding: 0.375rem 0.75rem;
+  border-top: 1px solid #707070;
+  border-top-left-radius: 5px;
+  border-left: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  border-bottom-left-radius: 5px;
+}
+
+.header {
+  background: #BCE4FA 0% 0% no-repeat padding-box;
+  padding: 7px 0px 7px 48px;
+}
+
+.cs-logo {
+  width: initial!important;
+  height: initial!important;
+}
+
+.title {
+  font-size: 40px;
+  color: #0D66CE;
+  font-weight: bold;
+}
+
+.continue {
+  padding: 14px 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #0D66CE;
+  border-color: #0D66CE;
+  color: #fff;
+}
+
+
+@media (min-width: 900px) {
+  .holder {
+    margin: 0;
+    padding: 0;
+    height: calc(100% - 52px);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 899px) {
+  .holder {
+    margin-top: 30px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+      max-width: 540px;
+  }
+}
